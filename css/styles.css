@@ -1,0 +1,130 @@
+:root {
+  --primary: #1c6bd9;
+  --dark: #003a8f;
+  --light: #f4f8ff;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1f1f1f;
+}
+
+header {
+  background: linear-gradient(90deg, var(--dark), var(--primary));
+  color: #fff;
+  padding: 46px;
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+header svg {
+  width: 72px;
+  height: 72px;
+  stroke: white;
+  fill: white;
+  stroke-width: 3;
+}
+
+section {
+  max-width: 1300px;
+  margin: auto;
+  padding: 70px 40px;
+}
+
+.definition {
+  background: var(--light);
+}
+
+.def-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.def-card {
+  background: #fff;
+  padding: 28px;
+  border-left: 6px solid var(--primary);
+  border-radius: 12px;
+}
+
+.snapshot h3,
+.components h3,
+.sales h3 {
+  color: var(--dark);
+  font-size: 32px;
+  margin-bottom: 36px;
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+}
+
+.stats div {
+  background: #eaf0ff;
+  padding: 22px;
+  margin-bottom: 18px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.stats strong {
+  font-size: 30px;
+  display: block;
+}
+
+.channels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.channels div {
+  background: #f9fbff;
+  border: 1px solid #dde3f3;
+  border-radius: 14px;
+  padding: 22px;
+  text-align: center;
+}
+
+.channels span {
+  font-size: 13px;
+  color: #555;
+}
+
+.component-grid,
+.sales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 32px;
+}
+
+.component-grid div,
+.sales-grid div {
+  background: #f7faff;
+  padding: 32px;
+  border-radius: 14px;
+}
+
+footer {
+  background: #101820;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
