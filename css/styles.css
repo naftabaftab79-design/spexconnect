@@ -1,27 +1,58 @@
-:root {
-  --primary: #1c6bd9;
-  --dark: #003a8f;
-  --light: #f4f8ff;
+* { box-sizing: border-box; }
+
+* =========================
+   NIQ Corporate Bar
+========================= */
+.niq-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 40px;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
 }
+
+.niq-brand {
+  background: #0d2a66;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 18px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+.niq-title {
+  font-size: 15px;
+  color: #415a77;
+}
+
 
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
+  background: #ffffff;
   color: #1f1f1f;
 }
 
-header {
-  background: linear-gradient(90deg, var(--dark), var(--primary));
-  color: #fff;
-  padding: 46px;
+.header {
+  background: linear-gradient(90deg, #003a8f, #1c6bd9);
+  color: white;
+  padding: 24px 40px;              /* ✅ reduced */
   display: flex;
-  gap: 26px;
   align-items: center;
+  gap: 20px;
+  min-height: 96px;                /* ✅ constrained */
 }
 
-header svg {
-  width: 72px;
-  height: 72px;
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.logo svg {
+  width: 56px;
+  height: 56px;
   stroke: white;
   fill: white;
   stroke-width: 3;
@@ -30,101 +61,171 @@ header svg {
 section {
   max-width: 1300px;
   margin: auto;
-  padding: 70px 40px;
+  padding: 56px 40px;
 }
 
-.definition {
-  background: var(--light);
-}
+.definition { background: #f4f8ff; }
 
 .def-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  gap: 22px;
 }
 
 .def-card {
-  background: #fff;
-  padding: 28px;
-  border-left: 6px solid var(--primary);
+  background: white;
+  border-left: 6px solid #1c6bd9;
   border-radius: 12px;
-}
-
-.snapshot h3,
-.components h3,
-.sales h3 {
-  color: var(--dark);
-  font-size: 32px;
-  margin-bottom: 36px;
+  padding: 20px;
 }
 
 .snapshot-grid {
   display: grid;
   grid-template-columns: 260px 1fr;
-  gap: 40px;
+  gap: 32px;
 }
 
 .stats div {
-  background: #eaf0ff;
-  padding: 22px;
-  margin-bottom: 18px;
-  text-align: center;
+  background: #f4f8ff;
+  padding: 18px;
   border-radius: 12px;
-}
-
-.stats strong {
-  font-size: 30px;
-  display: block;
+  margin-bottom: 12px;
+  text-align: center;
 }
 
 .channels {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
 }
 
-.channels div {
+.channel-card {
   background: #f9fbff;
-  border: 1px solid #dde3f3;
-  border-radius: 14px;
-  padding: 22px;
+  border: 1px solid #dde3f0;
+  border-radius: 10px;
+  padding: 14px;
   text-align: center;
+  max-width: 220px;
+  justify-self: center;
 }
 
-.channels span {
-  font-size: 13px;
+.channel-card span {
+  display: block;
+  font-size: 12px;
   color: #555;
+  margin-top: 6px;
 }
 
 .component-grid,
 .sales-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
 }
 
 .component-grid div,
 .sales-grid div {
   background: #f7faff;
-  padding: 32px;
+  padding: 26px;
   border-radius: 14px;
+  border-left: 6px solid #1c6bd9;
 }
 
 footer {
   background: #101820;
-  color: #fff;
+  color: white;
   text-align: center;
-  padding: 40px;
+  padding: 32px;
 }
 
-/* Animations */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity .8s ease, transform .8s ease;
+
+/* ===============================
+   Future Enhancements (Nexus)
+================================ */
+.future-enhancements {
+  background: #f9fbff;
+  border-radius: 18px;
+  margin: 40px auto;
 }
 
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+.future-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.future-brand {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ff6a00;
+  margin-bottom: 12px;
+}
+
+.future-text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.future-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .future-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===============================
+   Mapped Categories Section
+================================ */
+.mapped-categories {
+  background: #ffffff;
+}
+
+.mapped-wrapper {
+  max-width: 900px;          /* ✅ medium size */
+  margin: 0 auto;
+  background: #f9fbff;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.mapped-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+/* ✅ Make the note bold */
+
+.mapped-note {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(0,0,0,0.12);
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 500;
+  color: #444;
+  letter-spacing: 0.2px;
+  line-height: 1.6;
+}
+
+
+
+/* Tighten space before Core Platform Capabilities */
+.mapped-categories {
+  padding-bottom: 20px;   /* reduce from 56px */
+}
+
+.components {
+  padding-top: 24px;      /* reduce from 56px */
 }
