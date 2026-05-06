@@ -218,6 +218,17 @@ footer {
   letter-spacing: 0.2px;
   line-height: 1.6;
 }
+
+
+
+/* Tighten space before Core Platform Capabilities */
+.mapped-categories {
+  padding-bottom: 20px;   /* reduce from 56px */
+}
+
+.components {
+  padding-top: 24px;      /* reduce from 56px */
+}
 /* ===============================
    Value Proposition Section
 ================================ */
@@ -267,14 +278,4 @@ footer {
   .value-grid {
     grid-template-columns: 1fr;
   }
-}
-
-
-/* Tighten space before Core Platform Capabilities */
-.mapped-categories {
-  padding-bottom: 20px;   /* reduce from 56px */
-}
-
-.components {
-  padding-top: 24px;      /* reduce from 56px */
 }
