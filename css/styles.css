@@ -218,7 +218,56 @@ footer {
   letter-spacing: 0.2px;
   line-height: 1.6;
 }
+/* ===============================
+   Value Proposition Section
+================================ */
+.value-props {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 28px;
+}
+
+.value-card {
+  background: #f7faff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.value-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.value-text {
+  padding: 22px;
+}
+
+.value-text h4 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #1c2a4a;
+}
+
+.value-text p {
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 /* Tighten space before Core Platform Capabilities */
